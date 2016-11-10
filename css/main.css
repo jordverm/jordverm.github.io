@@ -1,0 +1,9 @@
+---
+
+---
+
+$ahsc: rgba(255,255,0,1);
+
+body{
+	background-color: $ahsc; 
+}
