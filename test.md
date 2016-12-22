@@ -1,0 +1,297 @@
+---
+layout  : default
+title   : "Dogpagnie"
+---
+<p id="demo"></p>
+
+<script>
+var text = "";
+
+var voorzieningen = [
+  {
+    "straat": "Achilles Musschestraat_1",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "1",
+    "gentid": "hond0002"
+  },
+ {
+    "straat": "Achterstraat",
+    "postcode": "9040.0",
+    "gemeente": "Gent",
+    "huisnummer": "7",
+    "gentid": "hond0006"
+  },
+   {
+    "straat": "Afold Baeyensstraat",
+    "postcode": "9040.0",
+    "gemeente": "Gent",
+    "huisnummer": "3",
+    "gentid": "hond0011"
+  },
+  {
+    "straat": "Adolf van Ooteghemstraat",
+    "postcode": "9050.0",
+    "gemeente": "Gent",
+    "huisnummer": "37",
+    "gentid": "hond0018"
+  },
+  {
+    "straat": "Alphonse de Hollainhof",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "0",
+    "gentid": "hond0019"
+  },
+  {
+    "straat": "Appelstraat",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "3",
+    "gentid": "hond0020"
+  },
+  {
+    "straat": "Bachtewalle",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "10",
+    "gentid": "hond0024"
+  },
+  {
+    "straat": "Banierstraat",
+    "postcode": "9040.0",
+    "gemeente": "Gent",
+    "huisnummer": "9",
+    "gentid": "hond0025"
+  },
+  {
+    "straat": "Baudelokaai",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "1",
+    "gentid": "hond0029"
+  },
+  {
+    "straat": "Brugsesteenweg",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "21",
+    "gentid": "hond0033"
+  },
+  {
+    "straat": "Brusselsepoortstraat",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "69",
+    "gentid": "hond0039"
+  },
+  {
+    "straat": "Burgstraat",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "21",
+    "gentid": "hond0042"
+  },
+  {
+    "straat": "Charles de l'Epéeplein",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "938",
+    "gentid": "hond0048"
+  },
+  {
+    "straat": "Coupure links",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "67",
+    "gentid": "hond0050"
+  },
+  {
+    "straat": "Coupure rechts",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "890",
+    "gentid": "hond0056"
+  },
+  {
+    "straat": "Elisabethplein",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "19",
+    "gentid": "hond0061"
+  },
+  {
+    "straat": "Flanelstraat",
+    "postcode": "9030.0",
+    "gemeente": "Gent",
+    "huisnummer": "33",
+    "gentid": "hond0064"
+  },
+  {
+    "straat": "Grensstraat",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "74",
+    "gentid": "hond0066"
+  },
+  {
+    "straat": "Heiveldstraat",
+    "postcode": "9040.0",
+    "gemeente": "Gent",
+    "huisnummer": "284",
+    "gentid": "hond0071"
+  },
+  {
+    "straat": "Isegrimstraat",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "3",
+    "gentid": "hond0081"
+  },
+  {
+    "straat": "Jubileumlaan",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "194",
+    "gentid": "hond0081"
+  },
+  {
+    "straat": "Klein Raamhof",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "0",
+    "gentid": "hond0097"
+  },
+  {
+    "straat": "Kolveniersgang",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "0",
+    "gentid": "hond0101"
+  },
+  {
+    "straat": "Koningin Astridlaan",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "1",
+    "gentid": "hond0102"
+  },
+  {
+    "straat": "krekelberg",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "0",
+    "gentid": "hond0108"
+  },
+  {
+    "straat": "Krevelstraat",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "1",
+    "gentid": "hond0109"
+  },
+  {
+    "straat": "Ledebergstraat",
+    "postcode": "9050.0",
+    "gemeente": "Gent",
+    "huisnummer": "1",
+    "gentid": "hond0114"
+  },
+  {
+    "straat": "lostraat",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "42",
+    "gentid": "hond0122"
+  },
+  {
+    "straat": "Louis Schuermanstraat",
+    "postcode": "9040.0",
+    "gemeente": "Gent",
+    "huisnummer": "2",
+    "gentid": "hond0124"
+  },
+  {
+    "straat": "Lucas De Heerestraat",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "2",
+    "gentid": "hond0127"
+  },
+  {
+    "straat": "Lusthoflaan",
+    "postcode": "9030.0",
+    "gemeente": "Gent",
+    "huisnummer": "6",
+    "gentid": "hond0132"
+  },
+  {
+    "straat": "Maaltebruggestraat",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "6",
+    "gentid": "hond0133"
+  },
+  {
+    "straat": "Maisstraat",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "0",
+    "gentid": "hond0136"
+  },
+  {
+    "straat": "Mimostraat",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "0",
+    "gentid": "hond0141"
+  },
+  {
+    "straat": "Molenstraat",
+    "postcode": "9032.0",
+    "gemeente": "Gent",
+    "huisnummer": "225",
+    "gentid": "hond0142"
+  },
+  {
+    "straat": "Morekstraat",
+    "postcode": "9032.0",
+    "gemeente": "Gent",
+    "huisnummer": "170",
+    "gentid": "hond0144"
+  },
+  {
+    "straat": "Ottergemsesteenweg",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "50",
+    "gentid": "hond0153"
+  },
+  {
+    "straat": "Ottogracht",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "1",
+    "gentid": "hond0158"
+  },
+  {
+    "straat": "Oude schaapmarkt",
+    "postcode": "9000.0",
+    "gemeente": "Gent",
+    "huisnummer": "15",
+    "gentid": "hond0162"
+  },
+  {
+    "straat": "Brugsesteenweg",
+    "postcode": "9031.0",
+    "gemeente": "Gent",
+    "huisnummer": "249",
+    "gentid": "hond1234"
+  }
+]
+
+for (i = 0; i < voorzieningen.length; i++) { 
+    text += '<article class="voorzieningen">' + voorzieningen[i].straat + ' ' + voorzieningen[i].huisnummer + '</article>';
+}
+document.getElementById("demo").innerHTML = text;
+</script>
