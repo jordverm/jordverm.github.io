@@ -1,10 +1,14 @@
+---
+layout: compress
+---
+
+
 <!DOCTYPE html>
 <html lang="{{ site.language }}">
   {% include components/head.html %}
   <body>
-    <main id="main" role="main">
+  {% include components/nav.html %}
     {{ content }}
-    </main>
-    {% include components/scripts.html %}
+  {% include components/scripts.html %}
   </body>
 </html>
